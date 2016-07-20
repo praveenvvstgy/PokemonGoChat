@@ -6,5 +6,6 @@ target 'PokemonChat' do
   use_frameworks!
 
   # Pods for PokemonChat
-  pod 'ChameleonFramework/Swift' 
+  pod 'ChameleonFramework/Swift'
+  pod 'PageMenu'
 end

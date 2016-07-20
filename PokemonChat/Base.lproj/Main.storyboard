@@ -8,6 +8,8 @@
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
@@ -41,6 +43,9 @@
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="w2A-Hg-CR3" kind="modal" id="TUc-YN-rfV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAp-Y9-qj9">
                                         <rect key="frame" x="164" y="0.0" width="164" height="48"/>
@@ -96,7 +101,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="338"/>
+            <point key="canvasLocation" x="20" y="345"/>
+        </scene>
+        <!--Auth Base Controller-->
+        <scene sceneID="WS0-7b-ij3">
+            <objects>
+                <viewController id="w2A-Hg-CR3" customClass="AuthBaseController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0pX-CK-hbL"/>
+                        <viewControllerLayoutGuide type="bottom" id="bPv-76-VZz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6oV-eX-koS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeU-HT-ChH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="345"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="EMT-ZH-oLa">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" id="z0Z-xa-IhG" customClass="LoginViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qoN-LR-U8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="TNj-Kf-HXc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZUM-mJ-PZB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9jT-FI-2LK">
+                                <rect key="frame" x="0.0" y="20" width="320" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="f9A-Go-TQy">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="4dP-XR-Emf"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ipZ-9i-B1R">
+                                        <rect key="frame" x="0.0" y="125" width="320" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="DU8-x3-yCC"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9jT-FI-2LK" firstAttribute="top" secondItem="qoN-LR-U8P" secondAttribute="bottom" id="0eM-xr-y55"/>
+                            <constraint firstItem="9jT-FI-2LK" firstAttribute="leading" secondItem="ZUM-mJ-PZB" secondAttribute="leadingMargin" constant="-16" id="RCY-rA-f5j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9jT-FI-2LK" secondAttribute="trailing" constant="-16" id="k3V-Io-M59"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="ipZ-9i-B1R" id="29t-Vi-jOP"/>
+                        <outlet property="usernameField" destination="f9A-Go-TQy" id="Vi8-ju-2Fm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UG5-W7-8sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="40"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="hit-4O-XSa">
+            <objects>
+                <viewController storyboardIdentifier="signupViewController" id="bu2-H6-Y5R" customClass="SignupViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QJs-Wn-NGQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7uE-qS-7AZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vUy-7c-cvs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05d-0M-2z5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="689"/>
         </scene>
     </scenes>
 </document>

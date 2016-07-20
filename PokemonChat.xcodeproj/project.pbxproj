@@ -11,6 +11,9 @@
 		B427529F1D3E23E200C19636 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B427529E1D3E21A100C19636 /* OpenSans-Semibold.ttf */; };
 		B42752A11D3E250100C19636 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B42752A01D3E250100C19636 /* OpenSans-Regular.ttf */; };
 		B42752A51D3E281400C19636 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42752A41D3E281400C19636 /* Constants.swift */; };
+		B42752A71D3E827C00C19636 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42752A61D3E827C00C19636 /* LoginViewController.swift */; };
+		B42752A91D3E829200C19636 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42752A81D3E829200C19636 /* SignupViewController.swift */; };
+		B42752AB1D3E82D200C19636 /* AuthBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42752AA1D3E82D200C19636 /* AuthBaseController.swift */; };
 		B4F3FAED1D3E031F00C1A604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F3FAEC1D3E031F00C1A604 /* AppDelegate.swift */; };
 		B4F3FAEF1D3E031F00C1A604 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F3FAEE1D3E031F00C1A604 /* SplashViewController.swift */; };
 		B4F3FAF21D3E031F00C1A604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F3FAF01D3E031F00C1A604 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 		B427529E1D3E21A100C19636 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		B42752A01D3E250100C19636 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		B42752A41D3E281400C19636 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B42752A61D3E827C00C19636 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B42752A81D3E829200C19636 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		B42752AA1D3E82D200C19636 /* AuthBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthBaseController.swift; sourceTree = "<group>"; };
 		B4F3FAE91D3E031F00C1A604 /* PokemonChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F3FAEC1D3E031F00C1A604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F3FAEE1D3E031F00C1A604 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				B4F3FAEE1D3E031F00C1A604 /* SplashViewController.swift */,
+				B42752A61D3E827C00C19636 /* LoginViewController.swift */,
+				B42752A81D3E829200C19636 /* SignupViewController.swift */,
+				B42752AA1D3E82D200C19636 /* AuthBaseController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,8 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42752A71D3E827C00C19636 /* LoginViewController.swift in Sources */,
 				B4F3FAEF1D3E031F00C1A604 /* SplashViewController.swift in Sources */,
+				B42752A91D3E829200C19636 /* SignupViewController.swift in Sources */,
 				B4F3FAED1D3E031F00C1A604 /* AppDelegate.swift in Sources */,
+				B42752AB1D3E82D200C19636 /* AuthBaseController.swift in Sources */,
 				B42752A51D3E281400C19636 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

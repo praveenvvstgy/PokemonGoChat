@@ -2,13 +2,16 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - PageMenu (1.2.9)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
+  - PageMenu
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
 
-PODFILE CHECKSUM: fa3103fe353cd1fb47bb32101167008faee5b2b5
+PODFILE CHECKSUM: a494604edd4cc676c0e9601d7610a8eee9aec7a6
 
 COCOAPODS: 1.0.1
