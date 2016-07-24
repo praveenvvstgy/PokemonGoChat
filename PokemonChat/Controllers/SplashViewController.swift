@@ -25,6 +25,18 @@ class SplashViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "moveToLogin" {
+            if let destinationVC = segue.destinationViewController as? AuthBaseController {
+                destinationVC.selectedPageIndex = 0
+            }
+        } else if segue.identifier == "moveToRegister" {
+            if let destinationVC = segue.destinationViewController as? AuthBaseController {
+                destinationVC.selectedPageIndex = 1
+            }
+        }
+    }
 
 }
 

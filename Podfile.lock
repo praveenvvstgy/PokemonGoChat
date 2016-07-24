@@ -2,16 +2,46 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Firebase (3.3.0):
+    - Firebase/Core (= 3.3.0)
+  - Firebase/Analytics (3.3.0):
+    - FirebaseAnalytics (= 3.2.1)
+  - Firebase/Core (3.3.0):
+    - Firebase/Analytics (= 3.3.0)
+  - FirebaseAnalytics (3.2.1):
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.3)
+  - FirebaseInstanceID (1.0.7)
+  - GoogleInterchangeUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.1.1)
+  - GoogleUtilities (1.3.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - IQKeyboardManagerSwift (4.0.4)
   - PageMenu (1.2.9)
+  - Validator (1.1.2)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
+  - Firebase
+  - IQKeyboardManagerSwift
   - PageMenu
+  - Validator
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
+  FirebaseAnalytics: 0fd6532cb2c3d03cd5cf26ad295ccb091efd3104
+  FirebaseInstanceID: a9d923f3d0b6fbf9fac89310860357aaadc34be5
+  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
+  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
+  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  IQKeyboardManagerSwift: e0964d04d6a29b71016fd346dca13ecb80a2823a
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  Validator: 3fa8a561459004f4629a698258ee365fc0b82406
 
-PODFILE CHECKSUM: a494604edd4cc676c0e9601d7610a8eee9aec7a6
+PODFILE CHECKSUM: f5cd60046142aaab35b09cbde4be14a2141484bc
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0

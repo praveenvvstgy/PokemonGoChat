@@ -8,4 +8,7 @@ target 'PokemonChat' do
   # Pods for PokemonChat
   pod 'ChameleonFramework/Swift'
   pod 'PageMenu'
+  pod 'IQKeyboardManagerSwift'
+  pod 'Firebase'
+  pod 'Validator'
 end

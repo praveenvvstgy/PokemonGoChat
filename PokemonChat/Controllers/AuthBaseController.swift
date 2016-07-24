@@ -11,6 +11,7 @@ import PageMenu
 
 class AuthBaseController: UIViewController {
     var pageMenu: CAPSPageMenu!
+    var selectedPageIndex: Int!
     
     override func viewDidLoad() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -35,6 +36,8 @@ class AuthBaseController: UIViewController {
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu.view)
+        
+        pageMenu.moveToPage(selectedPageIndex)
     }
     
     override func viewWillLayoutSubviews() {
