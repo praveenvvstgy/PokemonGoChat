@@ -16,6 +16,10 @@ class SplashViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = GradientColor(.TopToBottom, frame: self.view.bounds, colors: [Colors.splashTopGradient, Colors.splashBottomGradient])
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        Utils.ifLoggedInRedirectToHome(self)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

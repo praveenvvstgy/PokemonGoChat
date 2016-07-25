@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E2659E1161ED232679E97F4 /* Pods_PokemonChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5153C3E7C494ABF86B435649 /* Pods_PokemonChat.framework */; };
+		AC00D4EA1D45C3CF007999D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */; };
+		AC00D4EC1D45CD97007999D3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */; };
+		AC00D4EE1D45D13A007999D3 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4ED1D45D13A007999D3 /* SideViewController.swift */; };
 		AC1DE12B1D432BEC00ED0AA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DE12A1D432BEC00ED0AA0 /* Extensions.swift */; };
 		AC8F20761D44A8610082BB12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC8F20751D44A8610082BB12 /* GoogleService-Info.plist */; };
 		AC8F20791D44D67F0082BB12 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F20781D44D67F0082BB12 /* Utils.swift */; };
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		1EF06EB8151FA2DE9DD50D3F /* Pods-PokemonChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat.debug.xcconfig"; sourceTree = "<group>"; };
 		5153C3E7C494ABF86B435649 /* Pods_PokemonChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		AC00D4ED1D45D13A007999D3 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		AC1DE12A1D432BEC00ED0AA0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AC8F20751D44A8610082BB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC8F20781D44D67F0082BB12 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 				B42752A61D3E827C00C19636 /* LoginViewController.swift */,
 				B42752A81D3E829200C19636 /* SignupViewController.swift */,
 				B42752AA1D3E82D200C19636 /* AuthBaseController.swift */,
+				AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */,
+				AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */,
+				AC00D4ED1D45D13A007999D3 /* SideViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,8 +342,11 @@
 				B42752A91D3E829200C19636 /* SignupViewController.swift in Sources */,
 				B4F3FAED1D3E031F00C1A604 /* AppDelegate.swift in Sources */,
 				B42752AB1D3E82D200C19636 /* AuthBaseController.swift in Sources */,
+				AC00D4EE1D45D13A007999D3 /* SideViewController.swift in Sources */,
+				AC00D4EA1D45C3CF007999D3 /* HomeViewController.swift in Sources */,
 				B42752A51D3E281400C19636 /* Constants.swift in Sources */,
 				AC1DE12B1D432BEC00ED0AA0 /* Extensions.swift in Sources */,
+				AC00D4EC1D45CD97007999D3 /* BaseNavigationController.swift in Sources */,
 				AC8F20791D44D67F0082BB12 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

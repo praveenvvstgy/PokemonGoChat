@@ -8,6 +8,10 @@
 
 import UIKit
 import Validator
+import FirebaseAuth
+import MBProgressHUD
+import FirebaseDatabase
+import MMDrawerController
 
 class LoginViewController: UIViewController {
 
@@ -66,16 +70,66 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    // MARK: Signup Handling
+    func clearAllFields() {
+        usernameField.text = ""
+        passwordField.text = ""
+    }
+    
+    // MARK: Login Handling
     @IBAction func initiateLogin() {
         if validateForm() == true {
-            
+            let loadingIndicator = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            loadingIndicator.label.text = "Logging In"
+            // Check if username exists
+            FIRDatabase.database().reference().child("usernames/\(usernameField.text!)").observeSingleEventOfType(.Value , withBlock: { (snapshot) in
+                if snapshot.exists() {
+                    if let uid = snapshot.value as? String {
+                        // Fetch the email for the corresponding username
+                        FIRDatabase.database().reference().child("users/\(uid)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                            if snapshot.exists() {
+                                if let userDict = snapshot.value as? [String: AnyObject] {
+                                    if let email = userDict["email"] as? String {
+                                        // Signing using the email retreived and the password entered
+                                        FIRAuth.auth()?.signInWithEmail(email, password: self.passwordField.text!, completion: { (user, error) in
+                                            loadingIndicator.hideAnimated(true)
+                                            if error != nil {
+                                                self.showErrorForTime(5, message: error?.localizedDescription)
+                                            } else {
+                                                // Sign In Successful
+                                                self.clearAllFields()
+                                                Utils.ifLoggedInRedirectToHome(self)
+
+                                            }
+                                        })
+                                    }
+                                }
+                            } else {
+                                loadingIndicator.hideAnimated(true)
+                                // Ideally this never gets executed because of the rules set in Firebase
+                                self.showErrorForTime(5, message: "Username doesn't exist")
+
+                            }
+                        })
+                    } else {
+                        print("Cannot convert UID to string")
+                    }
+                } else {
+                    loadingIndicator.hideAnimated(true)
+                    self.showErrorForTime(5, message: "Username doesn't exist")
+                }
+            })
+
         } else {
             showErrorForTime(5)
         }
     }
     
     //MARK: Error Label Handling
+    func showErrorForTime(time: NSTimeInterval, message: String?) {
+        errorLabel.text = message
+        showErrorForTime(time)
+    }
+    
     func showErrorForTime(time: NSTimeInterval) {
         UIView.animateWithDuration(0.5) {
             self.errorLabelHeight.constant = 44
@@ -101,5 +155,16 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         textField.backgroundColor = UIColor.whiteColor()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == usernameField {
+            textField.resignFirstResponder()
+            passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            passwordField.resignFirstResponder()
+            initiateLogin()
+        }
+        return true
     }
 }

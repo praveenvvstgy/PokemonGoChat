@@ -15,6 +15,8 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
@@ -225,6 +227,47 @@
             </objects>
             <point key="canvasLocation" x="790" y="40"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="KxN-mE-jIL">
+            <objects>
+                <viewController storyboardIdentifier="homeViewController" id="oC1-RS-oEf" customClass="HomeViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V2r-mE-rhs"/>
+                        <viewControllerLayoutGuide type="bottom" id="tXO-BF-LhP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2NF-Kr-7eu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1O0-yz-HY1">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tXO-BF-LhP" firstAttribute="top" secondItem="1O0-yz-HY1" secondAttribute="bottom" id="JeM-Wy-SZ7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1O0-yz-HY1" secondAttribute="trailing" constant="-20" id="WAR-8l-IOc"/>
+                            <constraint firstItem="1O0-yz-HY1" firstAttribute="top" secondItem="2NF-Kr-7eu" secondAttribute="topMargin" id="oj7-HF-smV"/>
+                            <constraint firstItem="1O0-yz-HY1" firstAttribute="leading" secondItem="2NF-Kr-7eu" secondAttribute="leadingMargin" constant="-20" id="zDd-Xl-a2U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WtR-bj-maZ">
+                        <barButtonItem key="leftBarButtonItem" image="menuicon" id="DtW-3S-nKl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="toggleLeftDrawer" destination="oC1-RS-oEf" id="84h-dT-inq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8JP-dw-a99">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4we-wu-zD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="345"/>
+        </scene>
         <!--Signup View Controller-->
         <scene sceneID="hit-4O-XSa">
             <objects>
@@ -330,7 +373,82 @@
             </objects>
             <point key="canvasLocation" x="790" y="689"/>
         </scene>
+        <!--Side View Controller-->
+        <scene sceneID="foF-yI-heI">
+            <objects>
+                <viewController storyboardIdentifier="sideViewController" id="AKx-sx-E4a" customClass="SideViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6TB-yE-444"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ee-iN-24c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I7Z-EP-4Mw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-Q5-Oax">
+                                <rect key="frame" x="16" y="52" width="288" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="e5p-57-u70"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXG-2i-56X">
+                                <rect key="frame" x="16" y="114" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5qb-ZF-y80"/>
+                                    <constraint firstAttribute="height" constant="30" id="ccF-qi-Lgi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="0.83137254901960778" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signoutUser" destination="AKx-sx-E4a" eventType="touchUpInside" id="fOf-WS-03N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bXG-2i-56X" firstAttribute="top" secondItem="ETa-Q5-Oax" secondAttribute="bottom" constant="20" id="6hY-fc-dJj"/>
+                            <constraint firstItem="bXG-2i-56X" firstAttribute="leading" secondItem="I7Z-EP-4Mw" secondAttribute="leadingMargin" id="MoL-Qu-yBO"/>
+                            <constraint firstItem="ETa-Q5-Oax" firstAttribute="top" secondItem="6TB-yE-444" secondAttribute="bottom" constant="32" id="OAr-0m-mqU"/>
+                            <constraint firstItem="ETa-Q5-Oax" firstAttribute="leading" secondItem="I7Z-EP-4Mw" secondAttribute="leadingMargin" id="Osd-vt-IsA"/>
+                            <constraint firstItem="ETa-Q5-Oax" firstAttribute="trailing" secondItem="I7Z-EP-4Mw" secondAttribute="trailingMargin" id="qCd-Nn-k96"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="usernameLabel" destination="ETa-Q5-Oax" id="WMg-OE-EK7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PD-kJ-nzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="1016"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="uge-kV-jOY">
+            <objects>
+                <navigationController storyboardIdentifier="homeNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="mQr-jN-XjK" customClass="BaseNavigationController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cjp-jb-D6x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83137254900000002" green="0.074509803920000006" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oC1-RS-oEf" kind="relationship" relationship="rootViewController" id="KkJ-bN-iAr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybl-xf-gG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="345"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="menuicon" width="18" height="11"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6Gf-4t-LU3"/>
     </inferredMetricsTieBreakers>

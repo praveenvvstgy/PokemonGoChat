@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MMDrawerController
 
 extension CALayer {
     func setBorderColorFromUIColor(color: UIColor) {
@@ -28,5 +29,11 @@ extension UITextField {
         
         self.leftView = leftView
         leftViewMode = .Always
+    }
+}
+
+extension MMDrawerController {
+    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }

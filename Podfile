@@ -11,4 +11,8 @@ target 'PokemonChat' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase'
   pod 'Validator'
+  pod 'Firebase/Auth'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'Firebase/Database'
+  pod 'MMDrawerController', '~> 0.5.7'
 end

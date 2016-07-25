@@ -8,6 +8,11 @@
 
 import UIKit
 import Validator
+import FirebaseAuth
+import Firebase
+import MBProgressHUD
+import FirebaseDatabase
+import MMDrawerController
 
 class SignupViewController: UIViewController {
 
@@ -70,6 +75,7 @@ class SignupViewController: UIViewController {
             errorLabel.text = failures.first?.message
         }
     }
+    
     func validateForm() -> Bool {
         if usernameField.validate() == .Valid {
             if emailField.validate() == .Valid {
@@ -81,18 +87,87 @@ class SignupViewController: UIViewController {
         return false
     }
     
+    func clearAllFields() {
+        usernameField.text = ""
+        emailField.text = ""
+        passwordField.text = ""
+    }
+    
     // MARK: Signup Handling
     @IBAction func initiateSignup() {
         if validateForm() == true {
-
+            
+            let loadingIndicator = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            loadingIndicator.label.text = "Registering"
+            
+            // Attemp User creation with email and password
+            FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!) { (user, error) in
+                if let error = error {
+                    self.showErrorForTime(5, message: error.localizedDescription)
+                    loadingIndicator.hideAnimated(true)
+                } else {
+                    if let user = user {
+                        // Set the display name to username the user provided
+                        let changeRequest = user.profileChangeRequest()
+                        changeRequest.displayName = self.usernameField.text
+                        changeRequest.commitChangesWithCompletion({ (error) in
+                            if let error = error {
+                                self.showErrorForTime(5, message: error.localizedDescription)
+                                loadingIndicator.hideAnimated(true)
+                            } else {
+                                // Store the username under /users and /usernames, both provided
+                                // to and fro reference to username and uid which are used for validation
+                                // during registration as well as during login
+                                
+                                // The below operation will fail if the username already exists
+                                // because of the rules set in firebase and this acts as a check for 
+                                // preventing duplicate username
+                                FIRDatabase.database().reference().updateChildValues([
+                                    "users/\(user.uid)/username": self.usernameField.text!,
+                                    "users/\(user.uid)/email": self.emailField.text!,
+                                    "usernames/\(self.usernameField.text!)": user.uid
+                                    ], withCompletionBlock: { (error, reference) in
+                                        if error != nil {
+                                            // if the username already exists, we have to delete the user we
+                                            // created with email and password below
+                                            user.deleteWithCompletion({ (error) in
+                                                if error != nil {
+                                                    print(error?.localizedDescription)
+                                                }
+                                            })
+                                            self.showErrorForTime(5, message: "Username already exists")
+                                            loadingIndicator.hideAnimated(true)
+                                        } else {
+                                            // Registration Successful
+                                            self.clearAllFields()
+                                            loadingIndicator.hideAnimated(true)
+                                            Utils.ifLoggedInRedirectToHome(self)
+                                        }
+                                })
+                            }
+                        })
+                    }
+                }
+            }
         } else {
            showErrorForTime(5)
         }
     }
     
     //MARK: Error Label Handling
-    func showErrorForTime(time: NSTimeInterval) {
+    func showErrorForTime(time: NSTimeInterval, message: String?) {
+        errorLabel.text = message
         UIView.animateWithDuration(0.5) { 
+            self.errorLabelHeight.constant = 44
+            self.view.layoutIfNeeded()
+        }
+        Utils.delay(time, closure: {
+            self.hideError()
+        })
+    }
+    
+    func showErrorForTime(time: NSTimeInterval) {
+        UIView.animateWithDuration(0.5) {
             self.errorLabelHeight.constant = 44
             self.view.layoutIfNeeded()
         }
@@ -116,5 +191,19 @@ extension SignupViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         textField.backgroundColor = UIColor.whiteColor()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == usernameField {
+            textField.resignFirstResponder()
+            emailField.becomeFirstResponder()
+        } else if textField == emailField {
+            emailField.resignFirstResponder()
+            passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            passwordField.resignFirstResponder()
+            initiateSignup()
+        }
+        return true
     }
 }
