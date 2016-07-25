@@ -177,11 +177,11 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("postsCell", forIndexPath: indexPath) as! PostsTableViewCell
         
-//        let postKey = Array(posts.keys)[indexPath.row]
-//        if let post = posts[postKey] {
-//            cell.usernameLabel.text = post["username"]
-//            cell.postTitleLabel.text = post["text"]
-//        }
+        let postKey = Array(posts.keys)[indexPath.row]
+        if let post = posts[postKey] {
+            cell.usernameLabel.text = post["username"] ?? ""
+            cell.postTitleLabel.text = post["text"] ?? ""
+        }
         
         return cell
     }

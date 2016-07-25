@@ -306,6 +306,11 @@
                                                 <constraint firstItem="WJI-iq-st9" firstAttribute="leading" secondItem="v8m-Kr-whT" secondAttribute="leadingMargin" constant="17" id="w08-mp-5nf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationLabel" destination="0zL-3h-X3P" id="C5y-ga-Yxw"/>
+                                            <outlet property="postTitleLabel" destination="294-mj-o5l" id="hkL-KI-qJV"/>
+                                            <outlet property="usernameLabel" destination="sbA-1f-W1O" id="J8l-GB-Jwl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
