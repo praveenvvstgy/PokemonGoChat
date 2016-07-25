@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import PermissionScope
 
 class SplashViewController: UIViewController {
 
@@ -18,7 +19,10 @@ class SplashViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        LocationHelper.sharedHelper.showLocationPrompt()
+        
         Utils.ifLoggedInRedirectToHome(self)
+        
     }
 
     override func didReceiveMemoryWarning() {

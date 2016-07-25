@@ -54,6 +54,7 @@ PODS:
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
   - PageMenu (1.2.9)
+  - PermissionScope (1.0.2)
   - Validator (1.1.2)
 
 DEPENDENCIES:
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MMDrawerController (~> 0.5.7)
   - PageMenu
+  - PermissionScope
   - Validator
 
 EXTERNAL SOURCES:
@@ -94,8 +96,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
   Validator: 3fa8a561459004f4629a698258ee365fc0b82406
 
-PODFILE CHECKSUM: 66eda58e81a6717159827b9de796adf60f57d608
+PODFILE CHECKSUM: 34ece315eedc8a92787c9854a882d905dcebaec1
 
 COCOAPODS: 1.0.0

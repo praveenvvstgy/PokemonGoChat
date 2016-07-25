@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
         FIRApp.configure()
+        print("Current location is \(LocationHelper.sharedHelper.currentLocation)")
         return true
     }
 

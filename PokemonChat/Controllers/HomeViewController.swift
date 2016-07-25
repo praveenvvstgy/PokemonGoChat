@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     var newPostView: UIView!
     var postTextView: UITextView!
+    var circleQuery: GFCircleQuery!
     
     var posts = [String: [String: String]]() {
         didSet {
@@ -33,27 +34,44 @@ class HomeViewController: UIViewController {
         postsTable.delegate = self
         
         // Setup Geo Query
-        let center = CLLocation(latitude: 37.7832889, longitude: -122.4056973)
+        let center = LocationHelper.sharedHelper.currentLocation
         // Query locations at [37.7832889, -122.4056973] with a radius of 600 meters
-        let circleQuery = Utils.geoFireRef.queryAtLocation(center, withRadius: 2)
+        circleQuery = Utils.geoFireRef.queryAtLocation(center, withRadius: 5)
         
         circleQuery.observeEventType(.KeyEntered) { (key, location) in
+            let geoCoder = CLGeocoder()
+            
             if self.posts.keys.contains(key) == false {
                 Utils.databaseRef.child("posts/\(key)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                     if snapshot.exists() {
-                        if let post = snapshot.value as? [String: String] {
-                            self.posts[key] = post
+                        if var post = snapshot.value as? [String: String] {
+                            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+                                var placeMark: CLPlacemark!
+                                placeMark = placemarks?[0]
+                                if let addressDictionary = placeMark.addressDictionary {
+                                    if let city = addressDictionary["City"] as? NSString, let state = addressDictionary["State"] as? NSString {
+                                        post["location"] = "\(String(format: "%.2f", LocationHelper.sharedHelper.currentLocation.distanceFromLocation(location)/1609.344))m - \(city), \(state)"
+                                        self.posts[key] = post
+                                    }
+                                }
+                            })
                         }
                     }
                 })
             }
         }
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(locationChanged), name: "locationChanged", object: nil)
+        
         circleQuery.observeEventType(.KeyExited) { (key, location) in
             if self.posts.keys.contains(key) {
                 self.posts[key] = nil
             }
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        print("Current location is \(LocationHelper.sharedHelper.currentLocation)")
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -104,19 +122,18 @@ class HomeViewController: UIViewController {
     @IBAction func addNewPost() {
         UIView.transitionWithView(newPostView, duration: 0.5, options: .TransitionNone, animations: {
             self.navigationController?.view.addSubview(self.newPostView)
-            }, completion: { (finish) in
-                let horizontalConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
-                self.navigationController?.view.addConstraint(horizontalConstraint)
-                
-                let verticalConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
-                self.navigationController?.view.addConstraint(verticalConstraint)
-                
-                let widthConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0)
-                self.navigationController?.view.addConstraint(widthConstraint)
-                
-                let heightConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 0)
-                self.navigationController?.view.addConstraint(heightConstraint)
-        })
+            let horizontalConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+            self.navigationController?.view.addConstraint(horizontalConstraint)
+            
+            let verticalConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+            self.navigationController?.view.addConstraint(verticalConstraint)
+            
+            let widthConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0)
+            self.navigationController?.view.addConstraint(widthConstraint)
+            
+            let heightConstraint = NSLayoutConstraint(item: self.newPostView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.navigationController?.view, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 0)
+            self.navigationController?.view.addConstraint(heightConstraint)
+            }, completion: nil)
     }
     
     @IBAction func submitPost() {
@@ -135,6 +152,12 @@ class HomeViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
             })
+        }
+    }
+    
+    func locationChanged(notification: NSNotification) {
+        if let location = notification.object as? CLLocation {
+            circleQuery.center = location
         }
     }
 }
@@ -181,8 +204,8 @@ extension HomeViewController: UITableViewDataSource {
         if let post = posts[postKey] {
             cell.usernameLabel.text = post["username"] ?? ""
             cell.postTitleLabel.text = post["text"] ?? ""
+            cell.locationLabel.text = post["location"] ?? ""
         }
-        
         return cell
     }
     

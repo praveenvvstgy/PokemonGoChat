@@ -11,11 +11,15 @@ import FirebaseAuth
 import MMDrawerController
 import FirebaseDatabase
 import GeoFire
+import CoreLocation
+import PermissionScope
+
 
 class Utils {
     
     static var databaseRef = FIRDatabase.database().reference()
-    static var geoFireRef = GeoFire(firebaseRef: databaseRef)
+    static var geoFireRef = GeoFire(firebaseRef: databaseRef.child("/geodata"))
+    static var currentLocation: CLLocation!
     
     static func delay(delay:Double, closure:()->()) {
         dispatch_after(
@@ -64,7 +68,7 @@ class Utils {
             if error != nil {
                 failure()
             } else {
-                geoFireRef.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: postKey, withCompletionBlock: { (error) in
+                geoFireRef.setLocation(LocationHelper.sharedHelper.currentLocation, forKey: postKey, withCompletionBlock: { (error) in
                     if error != nil {
                         failure()
                     } else {
@@ -74,5 +78,4 @@ class Utils {
             }
         }
     }
-    
 }

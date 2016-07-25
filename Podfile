@@ -16,4 +16,5 @@ target 'PokemonChat' do
   pod 'Firebase/Database'
   pod 'MMDrawerController', '~> 0.5.7'
   pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
+  pod 'PermissionScope'
 end
