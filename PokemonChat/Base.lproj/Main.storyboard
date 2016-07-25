@@ -17,8 +17,11 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
@@ -239,9 +242,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1O0-yz-HY1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1O0-yz-HY1">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postsCell" rowHeight="124" id="kPM-4g-3JK" customClass="PostsTableViewCell" customModule="PokemonChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="328" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kPM-4g-3JK" id="v8m-Kr-whT">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="123.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJI-iq-st9">
+                                                    <rect key="frame" x="25" y="19" width="6" height="6"/>
+                                                    <color key="backgroundColor" red="0.93333333333333335" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="6" id="M0S-Pl-OOO"/>
+                                                        <constraint firstAttribute="width" constant="6" id="N8B-7s-zMF"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbA-1f-W1O">
+                                                    <rect key="frame" x="39" y="15" width="273" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="1nQ-lQ-QwQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="10"/>
+                                                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="294-mj-o5l">
+                                                    <rect key="frame" x="25" y="37" width="287" height="48"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zL-3h-X3P">
+                                                    <rect key="frame" x="25" y="93" width="287" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="cFg-9D-g7F"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="294-mj-o5l" firstAttribute="leading" secondItem="v8m-Kr-whT" secondAttribute="leadingMargin" constant="17" id="374-mV-uaz"/>
+                                                <constraint firstItem="0zL-3h-X3P" firstAttribute="top" secondItem="294-mj-o5l" secondAttribute="bottom" constant="8" id="Hdf-Lg-p1c"/>
+                                                <constraint firstItem="294-mj-o5l" firstAttribute="top" secondItem="sbA-1f-W1O" secondAttribute="bottom" constant="8" id="QuO-ZD-Ow6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0zL-3h-X3P" secondAttribute="trailing" constant="8" id="TCl-4W-8TA"/>
+                                                <constraint firstItem="sbA-1f-W1O" firstAttribute="top" secondItem="v8m-Kr-whT" secondAttribute="topMargin" constant="7" id="V86-ua-jaV"/>
+                                                <constraint firstItem="sbA-1f-W1O" firstAttribute="trailing" secondItem="v8m-Kr-whT" secondAttribute="trailingMargin" constant="-8" id="YJU-tW-hdP"/>
+                                                <constraint firstItem="sbA-1f-W1O" firstAttribute="leading" secondItem="WJI-iq-st9" secondAttribute="trailing" constant="8" id="YPm-LC-e0g"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0zL-3h-X3P" secondAttribute="bottom" constant="8" id="fAO-Xf-lLB"/>
+                                                <constraint firstItem="0zL-3h-X3P" firstAttribute="leading" secondItem="v8m-Kr-whT" secondAttribute="leadingMargin" constant="17" id="gaL-UJ-ll5"/>
+                                                <constraint firstItem="WJI-iq-st9" firstAttribute="top" secondItem="v8m-Kr-whT" secondAttribute="topMargin" constant="11" id="iZI-qR-a0h"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="294-mj-o5l" secondAttribute="trailing" constant="8" id="v7l-1O-f6B"/>
+                                                <constraint firstItem="WJI-iq-st9" firstAttribute="leading" secondItem="v8m-Kr-whT" secondAttribute="leadingMargin" constant="17" id="w08-mp-5nf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -261,8 +327,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8JP-dw-a99">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addNewPost" destination="oC1-RS-oEf" id="ROU-Dd-9km"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="postsTable" destination="1O0-yz-HY1" id="nAA-7Y-Ox8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4we-wu-zD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

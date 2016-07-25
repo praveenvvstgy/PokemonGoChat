@@ -9,8 +9,13 @@
 import Foundation
 import FirebaseAuth
 import MMDrawerController
+import FirebaseDatabase
+import GeoFire
 
 class Utils {
+    
+    static var databaseRef = FIRDatabase.database().reference()
+    static var geoFireRef = GeoFire(firebaseRef: databaseRef)
     
     static func delay(delay:Double, closure:()->()) {
         dispatch_after(
@@ -41,6 +46,32 @@ class Utils {
             drawerController.openDrawerGestureModeMask = .All
             drawerController.closeDrawerGestureModeMask = .All
             fromVC.presentViewController(drawerController, animated: true, completion: nil)
+        }
+    }
+    
+    static func addNewPost(postText: String, username: String, completion: () -> Void, failure: () -> Void) {
+        let postKey = FIRDatabase.database().reference().child("/posts").childByAutoId().key
+        let post = [
+            "text": postText,
+            "username": username,
+            "timestamp": String(NSDate())
+        ]
+        let postUpdates = [
+            "/posts/\(postKey)": post,
+            "/user-posts/\(username)/\(postKey)": postText
+        ]
+        databaseRef.updateChildValues(postUpdates as [NSObject : AnyObject]) { (error, ref) in
+            if error != nil {
+                failure()
+            } else {
+                geoFireRef.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: postKey, withCompletionBlock: { (error) in
+                    if error != nil {
+                        failure()
+                    } else {
+                        completion()
+                    }
+                })
+            }
         }
     }
     
