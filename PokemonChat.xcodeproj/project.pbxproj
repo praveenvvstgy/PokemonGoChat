@@ -14,7 +14,9 @@
 		AC00D4F41D462D0F007999D3 /* NewPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC00D4F31D462D0F007999D3 /* NewPostView.xib */; };
 		AC00D4F61D467285007999D3 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4F51D467285007999D3 /* PostsTableViewCell.swift */; };
 		AC00D4F91D46A889007999D3 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4F81D46A889007999D3 /* LocationHelper.swift */; };
+		AC00D4FB1D470066007999D3 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4FA1D470066007999D3 /* PostDetailViewController.swift */; };
 		AC1DE12B1D432BEC00ED0AA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DE12A1D432BEC00ED0AA0 /* Extensions.swift */; };
+		AC39FFC21D47AFCA000E1EBA /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39FFC11D47AFCA000E1EBA /* CommentsTableViewCell.swift */; };
 		AC8F20761D44A8610082BB12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC8F20751D44A8610082BB12 /* GoogleService-Info.plist */; };
 		AC8F20791D44D67F0082BB12 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F20781D44D67F0082BB12 /* Utils.swift */; };
 		B427529F1D3E23E200C19636 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B427529E1D3E21A100C19636 /* OpenSans-Semibold.ttf */; };
@@ -39,7 +41,9 @@
 		AC00D4F31D462D0F007999D3 /* NewPostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPostView.xib; sourceTree = "<group>"; };
 		AC00D4F51D467285007999D3 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		AC00D4F81D46A889007999D3 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		AC00D4FA1D470066007999D3 /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		AC1DE12A1D432BEC00ED0AA0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AC39FFC11D47AFCA000E1EBA /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		AC8F20751D44A8610082BB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC8F20781D44D67F0082BB12 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B427529E1D3E21A100C19636 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			children = (
 				AC00D4F31D462D0F007999D3 /* NewPostView.xib */,
 				AC00D4F51D467285007999D3 /* PostsTableViewCell.swift */,
+				AC39FFC11D47AFCA000E1EBA /* CommentsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */,
 				AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */,
 				AC00D4ED1D45D13A007999D3 /* SideViewController.swift */,
+				AC00D4FA1D470066007999D3 /* PostDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -362,10 +368,12 @@
 				B4F3FAED1D3E031F00C1A604 /* AppDelegate.swift in Sources */,
 				B42752AB1D3E82D200C19636 /* AuthBaseController.swift in Sources */,
 				AC00D4EE1D45D13A007999D3 /* SideViewController.swift in Sources */,
+				AC39FFC21D47AFCA000E1EBA /* CommentsTableViewCell.swift in Sources */,
 				AC00D4F91D46A889007999D3 /* LocationHelper.swift in Sources */,
 				AC00D4EA1D45C3CF007999D3 /* HomeViewController.swift in Sources */,
 				B42752A51D3E281400C19636 /* Constants.swift in Sources */,
 				AC1DE12B1D432BEC00ED0AA0 /* Extensions.swift in Sources */,
+				AC00D4FB1D470066007999D3 /* PostDetailViewController.swift in Sources */,
 				AC00D4EC1D45CD97007999D3 /* BaseNavigationController.swift in Sources */,
 				AC8F20791D44D67F0082BB12 /* Utils.swift in Sources */,
 			);

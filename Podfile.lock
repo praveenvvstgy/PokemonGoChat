@@ -2,6 +2,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - DZNEmptyDataSet (1.8.1)
   - Firebase (3.3.0):
     - Firebase/Core (= 3.3.0)
   - Firebase/Analytics (3.3.0):
@@ -59,6 +60,7 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
+  - DZNEmptyDataSet
   - Firebase
   - Firebase/Auth
   - Firebase/Database
@@ -81,6 +83,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
   FirebaseAnalytics: 0fd6532cb2c3d03cd5cf26ad295ccb091efd3104
   FirebaseAuth: 5efddc3fae47042b73585f083f956462be4f5b8e
@@ -99,6 +102,6 @@ SPEC CHECKSUMS:
   PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
   Validator: 3fa8a561459004f4629a698258ee365fc0b82406
 
-PODFILE CHECKSUM: 34ece315eedc8a92787c9854a882d905dcebaec1
+PODFILE CHECKSUM: 42b01d0dd3914e8c803433c6b7528065a067e0b6
 
 COCOAPODS: 1.0.0

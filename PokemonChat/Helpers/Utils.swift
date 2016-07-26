@@ -41,6 +41,21 @@ class Utils {
         return nil
     }
     
+    static func getUsernameString(name: String) -> NSAttributedString {
+        let iconAttributes = [
+            NSFontAttributeName: UIFont(name: "OpenSans-Semibold", size: 10)!,
+            NSForegroundColorAttributeName: UIColor(red:0.93, green:0.08, blue:0.08, alpha:1.00)
+        ]
+        
+        let textAttributes = [
+            NSFontAttributeName: UIFont(name: "OpenSans-Semibold", size: 10)!,
+        ]
+        let usernameIcon = NSMutableAttributedString(string: " ● ", attributes: iconAttributes)
+        let usernameText = NSAttributedString(string: name, attributes: textAttributes)
+        usernameIcon.appendAttributedString(usernameText)
+        return usernameIcon
+    }
+    
     static func ifLoggedInRedirectToHome(fromVC: UIViewController) {
         if FIRAuth.auth()?.currentUser != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

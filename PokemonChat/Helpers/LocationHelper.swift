@@ -27,7 +27,7 @@ class LocationHelper: NSObject {
     func showLocationPrompt() {
         let pscope = PermissionScope(backgroundTapCancels: false)
         pscope.closeButton.hidden = true
-        pscope.addPermission(LocationAlwaysPermission(), message: "We use this to find messages near you \nand attach your location to your posts")
+        pscope.addPermission(LocationWhileInUsePermission(), message: "We use this to find messages near you \nand attach your location to your posts")
         pscope.show({ finished, results in
             print("got results \(results)")
             }, cancelled: { (results) -> Void in
@@ -41,9 +41,11 @@ class LocationHelper: NSObject {
 extension LocationHelper: CLLocationManagerDelegate {
     
     @objc func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if manager.location != nil && currentLocation != nil  && currentLocation.distanceFromLocation(manager.location!) > 100 {
+            print("Location changed to: \(manager.location)")
+            NSNotificationCenter.defaultCenter().postNotificationName("locationChanged", object: manager.location)
+        }
         currentLocation = manager.location
-        print("Location changed to: \(manager.location)")
-        NSNotificationCenter.defaultCenter().postNotificationName("locationChanged", object: currentLocation)
     }
     
 }

@@ -13,6 +13,8 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    
+    var postKey: String!
 
     override func awakeFromNib() {
         super.awakeFromNib()

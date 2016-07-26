@@ -11,6 +11,7 @@ import FirebaseAuth
 import MBProgressHUD
 import CoreLocation
 import GeoFire
+import DZNEmptyDataSet
 
 class HomeViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class HomeViewController: UIViewController {
     var postTextView: UITextView!
     var circleQuery: GFCircleQuery!
     
-    var posts = [String: [String: String]]() {
+    var posts = [String: [String: AnyObject]]() {
         didSet {
             postsTable.reloadData()
         }
@@ -32,6 +33,9 @@ class HomeViewController: UIViewController {
         postsTable.rowHeight = UITableViewAutomaticDimension
         postsTable.dataSource = self
         postsTable.delegate = self
+        postsTable.emptyDataSetDelegate = self
+        postsTable.emptyDataSetSource = self
+        postsTable.tableFooterView = UIView()
         
         // Setup Geo Query
         let center = LocationHelper.sharedHelper.currentLocation
@@ -44,7 +48,7 @@ class HomeViewController: UIViewController {
             if self.posts.keys.contains(key) == false {
                 Utils.databaseRef.child("posts/\(key)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                     if snapshot.exists() {
-                        if var post = snapshot.value as? [String: String] {
+                        if var post = snapshot.value as? [String: AnyObject] {
                             geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                                 var placeMark: CLPlacemark!
                                 placeMark = placemarks?[0]
@@ -185,6 +189,16 @@ extension HomeViewController: UITextViewDelegate {
         }
         return true
     }
+    
+    // MARK: Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "postDetails" {
+            if let postDetailsViewController = segue.destinationViewController as? PostDetailViewController, let cell = sender as? PostsTableViewCell {
+                postDetailsViewController.post = posts[cell.postKey]
+                postDetailsViewController.postKey = cell.postKey
+            }
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -202,9 +216,10 @@ extension HomeViewController: UITableViewDataSource {
         
         let postKey = Array(posts.keys)[indexPath.row]
         if let post = posts[postKey] {
-            cell.usernameLabel.text = post["username"] ?? ""
-            cell.postTitleLabel.text = post["text"] ?? ""
-            cell.locationLabel.text = post["location"] ?? ""
+            cell.usernameLabel.text = post["username"] as? String
+            cell.postTitleLabel.text = post["text"] as? String
+            cell.locationLabel.text = post["location"] as? String
+            cell.postKey = postKey
         }
         return cell
     }
@@ -217,4 +232,36 @@ extension HomeViewController: UITableViewDelegate {
         return 124
     }
 
+}
+
+extension HomeViewController: DZNEmptyDataSetSource {
+    
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "sadicon")
+    }
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let attributes = [
+            NSFontAttributeName: UIFont(name: "OpenSans", size: 16)!,
+            NSForegroundColorAttributeName: UIColor(red:0.13, green:0.13, blue:0.14, alpha:1.00)
+        ]
+        return NSAttributedString(string: "Looks like there aren’t any posts right now.", attributes: attributes)
+    }
+    
+    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+        let attributes = [
+            NSFontAttributeName: UIFont(name: "OpenSans-Semibold", size: 12)!,
+            NSForegroundColorAttributeName: UIColor(red:0.93, green:0.08, blue:0.08, alpha:1.00)
+        ]
+        return NSAttributedString(string: "CREATE A POST", attributes: attributes)
+    }
+    
+}
+
+extension HomeViewController: DZNEmptyDataSetDelegate {
+    
+    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
+        addNewPost()
+    }
+    
 }
