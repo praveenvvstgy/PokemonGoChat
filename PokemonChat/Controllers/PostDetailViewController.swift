@@ -43,7 +43,7 @@ class PostDetailViewController: UIViewController {
         locationLabel.text = post["location"] as? String
         
         if let commentFieldUsername = view.viewWithTag(10) as? UILabel {
-            commentFieldUsername.attributedText = Utils.getUsernameString(post["username"]  as! String)
+            commentFieldUsername.attributedText = Utils.getUsernameString((FIRAuth.auth()?.currentUser?.displayName)!)
         }
         
         collapseCommentBox()

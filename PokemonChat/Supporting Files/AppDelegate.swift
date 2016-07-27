@@ -10,6 +10,9 @@ import UIKit
 import IQKeyboardManagerSwift
 import Firebase
 import FirebaseDatabase
+import Fabric
+import Crashlytics
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         print("Current location is \(LocationHelper.sharedHelper.currentLocation)")
+//        Fabric.with([Crashlytics.self])
         return true
     }
 

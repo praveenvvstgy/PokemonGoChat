@@ -24,12 +24,19 @@ class LocationHelper: NSObject {
         locationManager.startUpdatingLocation()
     }
     
+    func startCollectingLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.startUpdatingLocation()
+    }
+    
     func showLocationPrompt() {
         let pscope = PermissionScope(backgroundTapCancels: false)
         pscope.closeButton.hidden = true
         pscope.addPermission(LocationWhileInUsePermission(), message: "We use this to find messages near you \nand attach your location to your posts")
         pscope.show({ finished, results in
             print("got results \(results)")
+            LocationHelper.sharedHelper.startCollectingLocation()
             }, cancelled: { (results) -> Void in
                 print("thing was cancelled")
         })

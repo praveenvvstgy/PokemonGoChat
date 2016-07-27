@@ -2,7 +2,10 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
   - DZNEmptyDataSet (1.8.1)
+  - Fabric (1.6.7)
   - Firebase (3.3.0):
     - Firebase/Core (= 3.3.0)
   - Firebase/Analytics (3.3.0):
@@ -60,7 +63,9 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
+  - Crashlytics
   - DZNEmptyDataSet
+  - Fabric
   - Firebase
   - Firebase/Auth
   - Firebase/Database
@@ -83,7 +88,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
   FirebaseAnalytics: 0fd6532cb2c3d03cd5cf26ad295ccb091efd3104
   FirebaseAuth: 5efddc3fae47042b73585f083f956462be4f5b8e
@@ -102,6 +109,6 @@ SPEC CHECKSUMS:
   PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
   Validator: 3fa8a561459004f4629a698258ee365fc0b82406
 
-PODFILE CHECKSUM: 42b01d0dd3914e8c803433c6b7528065a067e0b6
+PODFILE CHECKSUM: ab9c7abbcf1fc4a09ff1264a2ba6bfba80072035
 
 COCOAPODS: 1.0.0

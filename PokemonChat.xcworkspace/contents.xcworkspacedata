@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PokemonChat.xcodeproj">
+      location = "group:/Users/praveen/Development/iOS Apps/PokemonGoChat/PikaChat.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

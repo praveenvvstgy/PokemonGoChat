@@ -18,4 +18,6 @@ target 'PokemonChat' do
   pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
   pod 'PermissionScope'
   pod 'DZNEmptyDataSet'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
