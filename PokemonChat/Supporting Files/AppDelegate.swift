@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         print("Current location is \(LocationHelper.sharedHelper.currentLocation)")

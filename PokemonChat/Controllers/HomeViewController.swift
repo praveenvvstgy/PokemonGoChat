@@ -39,7 +39,6 @@ class HomeViewController: UIViewController {
         
         // Setup Geo Query
         let center = LocationHelper.sharedHelper.currentLocation
-        // Query locations at [37.7832889, -122.4056973] with a radius of 600 meters
         circleQuery = Utils.geoFireRef.queryAtLocation(center, withRadius: 5)
         
         circleQuery.observeEventType(.KeyEntered) { (key, location) in

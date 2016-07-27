@@ -40,7 +40,7 @@
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -128,7 +128,7 @@
         <!--Auth Base Controller-->
         <scene sceneID="WS0-7b-ij3">
             <objects>
-                <viewController id="w2A-Hg-CR3" customClass="AuthBaseController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w2A-Hg-CR3" customClass="AuthBaseController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0pX-CK-hbL"/>
                         <viewControllerLayoutGuide type="bottom" id="bPv-76-VZz"/>
@@ -146,7 +146,7 @@
         <!--Login View Controller-->
         <scene sceneID="EMT-ZH-oLa">
             <objects>
-                <viewController storyboardIdentifier="loginViewController" id="z0Z-xa-IhG" customClass="LoginViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="z0Z-xa-IhG" customClass="LoginViewController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qoN-LR-U8P"/>
                         <viewControllerLayoutGuide type="bottom" id="TNj-Kf-HXc"/>
@@ -240,7 +240,7 @@
         <!--Home View Controller-->
         <scene sceneID="KxN-mE-jIL">
             <objects>
-                <viewController storyboardIdentifier="homeViewController" id="oC1-RS-oEf" customClass="HomeViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="oC1-RS-oEf" customClass="HomeViewController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V2r-mE-rhs"/>
                         <viewControllerLayoutGuide type="bottom" id="tXO-BF-LhP"/>
@@ -253,7 +253,7 @@
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postsCell" rowHeight="124" id="kPM-4g-3JK" customClass="PostsTableViewCell" customModule="PokemonChat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postsCell" rowHeight="124" id="kPM-4g-3JK" customClass="PostsTableViewCell" customModule="PikaChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="328" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kPM-4g-3JK" id="v8m-Kr-whT">
@@ -356,7 +356,7 @@
         <!--Post Detail View Controller-->
         <scene sceneID="fdt-AE-WEM">
             <objects>
-                <viewController id="KLI-Jg-bSF" customClass="PostDetailViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KLI-Jg-bSF" customClass="PostDetailViewController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8yf-nY-l5e"/>
                         <viewControllerLayoutGuide type="bottom" id="tfD-rp-Fgg"/>
@@ -455,7 +455,7 @@
                                 <rect key="frame" x="-4" y="141" width="328" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentsCell" rowHeight="64" id="kJD-wi-spQ" customClass="CommentsTableViewCell" customModule="PokemonChat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentsCell" rowHeight="64" id="kJD-wi-spQ" customClass="CommentsTableViewCell" customModule="PikaChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="328" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kJD-wi-spQ" id="4DH-bq-kyn">
@@ -516,6 +516,7 @@
                             <constraint firstItem="U09-EM-Nxm" firstAttribute="top" secondItem="ja6-dU-LeK" secondAttribute="bottom" id="caW-SZ-FyJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U09-EM-Nxm" secondAttribute="trailing" constant="-20" id="eHK-R8-Ny0"/>
                             <constraint firstItem="ja6-dU-LeK" firstAttribute="leading" secondItem="eGX-1J-QGj" secondAttribute="leadingMargin" constant="-20" id="efU-tD-Uva"/>
+                            <constraint firstItem="tfD-rp-Fgg" firstAttribute="top" secondItem="TbH-df-wmg" secondAttribute="bottom" priority="750" constant="41" id="iZU-Qv-YcH"/>
                             <constraint firstItem="W0b-Ht-q0Q" firstAttribute="trailing" secondItem="eGX-1J-QGj" secondAttribute="trailingMargin" id="mxg-CM-9QL"/>
                             <constraint firstItem="c3B-c3-D3V" firstAttribute="leading" secondItem="eGX-1J-QGj" secondAttribute="leadingMargin" constant="-20" id="sDp-nO-U1w"/>
                             <constraint firstItem="ja6-dU-LeK" firstAttribute="top" secondItem="W0b-Ht-q0Q" secondAttribute="bottom" constant="8" id="zNt-hP-o2U"/>
@@ -541,7 +542,7 @@
         <!--Signup View Controller-->
         <scene sceneID="hit-4O-XSa">
             <objects>
-                <viewController storyboardIdentifier="signupViewController" id="bu2-H6-Y5R" customClass="SignupViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupViewController" id="bu2-H6-Y5R" customClass="SignupViewController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QJs-Wn-NGQ"/>
                         <viewControllerLayoutGuide type="bottom" id="7uE-qS-7AZ"/>
@@ -646,7 +647,7 @@
         <!--Side View Controller-->
         <scene sceneID="foF-yI-heI">
             <objects>
-                <viewController storyboardIdentifier="sideViewController" id="AKx-sx-E4a" customClass="SideViewController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideViewController" id="AKx-sx-E4a" customClass="SideViewController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6TB-yE-444"/>
                         <viewControllerLayoutGuide type="bottom" id="0ee-iN-24c"/>
@@ -699,7 +700,7 @@
         <!--Base Navigation Controller-->
         <scene sceneID="uge-kV-jOY">
             <objects>
-                <navigationController storyboardIdentifier="homeNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="mQr-jN-XjK" customClass="BaseNavigationController" customModule="PokemonChat" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="mQr-jN-XjK" customClass="BaseNavigationController" customModule="PikaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cjp-jb-D6x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
