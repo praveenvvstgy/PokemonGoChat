@@ -53,6 +53,7 @@ class HomeViewController: UIViewController {
                                 placeMark = placemarks?[0]
                                 if let addressDictionary = placeMark.addressDictionary {
                                     if let city = addressDictionary["City"] as? NSString, let state = addressDictionary["State"] as? NSString {
+                                        // Convert meters to miles and format it
                                         post["location"] = "\(String(format: "%.2f", LocationHelper.sharedHelper.currentLocation.distanceFromLocation(location)/1609.344))m - \(city), \(state)"
                                         self.posts[key] = post
                                     }
