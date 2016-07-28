@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E2659E1161ED232679E97F4 /* Pods_PokemonChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5153C3E7C494ABF86B435649 /* Pods_PokemonChat.framework */; };
+		3793F5A02238A21679B187E5 /* Pods_PikaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A4719686467867AC06068F /* Pods_PikaChat.framework */; };
 		AC00D4EA1D45C3CF007999D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */; };
 		AC00D4EC1D45CD97007999D3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */; };
 		AC00D4EE1D45D13A007999D3 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00D4ED1D45D13A007999D3 /* SideViewController.swift */; };
@@ -33,33 +33,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EF06EB8151FA2DE9DD50D3F /* Pods-PokemonChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat.debug.xcconfig"; sourceTree = "<group>"; };
-		5153C3E7C494ABF86B435649 /* Pods_PokemonChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		AC00D4ED1D45D13A007999D3 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		65D0EB1DBB933C69FD52DABA /* Pods-PikaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PikaChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PikaChat/Pods-PikaChat.release.xcconfig"; sourceTree = "<group>"; };
+		AC00D4E91D45C3CF007999D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC00D4EB1D45CD97007999D3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BaseNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC00D4ED1D45D13A007999D3 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SideViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AC00D4F31D462D0F007999D3 /* NewPostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPostView.xib; sourceTree = "<group>"; };
-		AC00D4F51D467285007999D3 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
-		AC00D4F81D46A889007999D3 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
-		AC00D4FA1D470066007999D3 /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
-		AC1DE12A1D432BEC00ED0AA0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		AC39FFC11D47AFCA000E1EBA /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		AC00D4F51D467285007999D3 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PostsTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC00D4F81D46A889007999D3 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LocationHelper.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC00D4FA1D470066007999D3 /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PostDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC1DE12A1D432BEC00ED0AA0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Extensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC39FFC11D47AFCA000E1EBA /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CommentsTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AC8F20751D44A8610082BB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AC8F20781D44D67F0082BB12 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AC8F20781D44D67F0082BB12 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Utils.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B1A4719686467867AC06068F /* Pods_PikaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PikaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427529E1D3E21A100C19636 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		B42752A01D3E250100C19636 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		B42752A41D3E281400C19636 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B42752A61D3E827C00C19636 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B42752A81D3E829200C19636 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		B42752AA1D3E82D200C19636 /* AuthBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthBaseController.swift; sourceTree = "<group>"; };
+		B42752A41D3E281400C19636 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constants.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B42752A61D3E827C00C19636 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B42752A81D3E829200C19636 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SignupViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B42752AA1D3E82D200C19636 /* AuthBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AuthBaseController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B4F3FAE91D3E031F00C1A604 /* PikaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PikaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4F3FAEC1D3E031F00C1A604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4F3FAEE1D3E031F00C1A604 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B4F3FAEC1D3E031F00C1A604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B4F3FAEE1D3E031F00C1A604 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SplashViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B4F3FAF11D3E031F00C1A604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4F3FAF31D3E031F00C1A604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F3FAF61D3E031F00C1A604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F3FAF81D3E031F00C1A604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0229D95548AD09A232DD0C9 /* Pods-PokemonChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat.release.xcconfig"; sourceTree = "<group>"; };
+		BB897DDE2065BD2F1822B602 /* Pods-PikaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PikaChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PikaChat/Pods-PikaChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,20 +67,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2659E1161ED232679E97F4 /* Pods_PokemonChat.framework in Frameworks */,
+				3793F5A02238A21679B187E5 /* Pods_PikaChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F35E27AACD862511BBF8B36 /* Pods */ = {
+		46161D68E203873AEB152A7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1EF06EB8151FA2DE9DD50D3F /* Pods-PokemonChat.debug.xcconfig */,
-				F0229D95548AD09A232DD0C9 /* Pods-PokemonChat.release.xcconfig */,
+				B1A4719686467867AC06068F /* Pods_PikaChat.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AC00D4F21D462CDE007999D3 /* Views */ = {
@@ -149,10 +148,10 @@
 		B4F3FAE01D3E031F00C1A604 = {
 			isa = PBXGroup;
 			children = (
-				B4F3FAEB1D3E031F00C1A604 /* PokemonChat */,
+				B4F3FAEB1D3E031F00C1A604 /* PikaChat */,
 				B4F3FAEA1D3E031F00C1A604 /* Products */,
-				4F35E27AACD862511BBF8B36 /* Pods */,
-				CE2BAAD79CFE275A7F92B2E3 /* Frameworks */,
+				FB80B40F624A2859B4B3AB62 /* Pods */,
+				46161D68E203873AEB152A7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,7 +163,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4F3FAEB1D3E031F00C1A604 /* PokemonChat */ = {
+		B4F3FAEB1D3E031F00C1A604 /* PikaChat */ = {
 			isa = PBXGroup;
 			children = (
 				AC8F20771D44A8650082BB12 /* Supporting Files */,
@@ -176,15 +175,16 @@
 				B4F3FAF31D3E031F00C1A604 /* Assets.xcassets */,
 				B4F3FAF51D3E031F00C1A604 /* LaunchScreen.storyboard */,
 			);
-			path = PokemonChat;
+			path = PikaChat;
 			sourceTree = "<group>";
 		};
-		CE2BAAD79CFE275A7F92B2E3 /* Frameworks */ = {
+		FB80B40F624A2859B4B3AB62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5153C3E7C494ABF86B435649 /* Pods_PokemonChat.framework */,
+				BB897DDE2065BD2F1822B602 /* Pods-PikaChat.debug.xcconfig */,
+				65D0EB1DBB933C69FD52DABA /* Pods-PikaChat.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,22 +194,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4F3FAFB1D3E031F00C1A604 /* Build configuration list for PBXNativeTarget "PikaChat" */;
 			buildPhases = (
-				FDBB7D88B14FFF2AFAAFB617 /* 📦 Check Pods Manifest.lock */,
-				2CF87B9307F56F1A328DF493 /* [CP] Check Pods Manifest.lock */,
+				C5D4CB37E2D2F4D63D3004FF /* 📦 Check Pods Manifest.lock */,
 				B4F3FAE51D3E031F00C1A604 /* Sources */,
 				B4F3FAE61D3E031F00C1A604 /* Frameworks */,
 				B4F3FAE71D3E031F00C1A604 /* Resources */,
-				BEDCAC57DCCD9A4060863FA6 /* [CP] Embed Pods Frameworks */,
-				B74F7F739CAF7708308C9A22 /* [CP] Copy Pods Resources */,
-				D1B3AD703E544352FD924192 /* 📦 Embed Pods Frameworks */,
-				D92535B97F8CA7A7316801D8 /* 📦 Copy Pods Resources */,
+				1CF61F2B2AACD3961D0A6CA5 /* 📦 Embed Pods Frameworks */,
+				4A13C3DAA8E410FD5D925E55 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PikaChat;
-			productName = PokemonChat;
+			productName = PikaChat;
 			productReference = B4F3FAE91D3E031F00C1A604 /* PikaChat.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -264,52 +261,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2CF87B9307F56F1A328DF493 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B74F7F739CAF7708308C9A22 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BEDCAC57DCCD9A4060863FA6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D1B3AD703E544352FD924192 /* 📦 Embed Pods Frameworks */ = {
+		1CF61F2B2AACD3961D0A6CA5 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,10 +273,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PikaChat/Pods-PikaChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D92535B97F8CA7A7316801D8 /* 📦 Copy Pods Resources */ = {
+		4A13C3DAA8E410FD5D925E55 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,10 +288,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonChat/Pods-PokemonChat-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PikaChat/Pods-PikaChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDBB7D88B14FFF2AFAAFB617 /* 📦 Check Pods Manifest.lock */ = {
+		C5D4CB37E2D2F4D63D3004FF /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,10 +438,10 @@
 		};
 		B4F3FAFC1D3E031F00C1A604 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EF06EB8151FA2DE9DD50D3F /* Pods-PokemonChat.debug.xcconfig */;
+			baseConfigurationReference = BB897DDE2065BD2F1822B602 /* Pods-PikaChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/PokemonChat/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PikaChat/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.praveengowda.app.PikaChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,10 +450,10 @@
 		};
 		B4F3FAFD1D3E031F00C1A604 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0229D95548AD09A232DD0C9 /* Pods-PokemonChat.release.xcconfig */;
+			baseConfigurationReference = 65D0EB1DBB933C69FD52DABA /* Pods-PikaChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/PokemonChat/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PikaChat/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.praveengowda.app.PikaChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
